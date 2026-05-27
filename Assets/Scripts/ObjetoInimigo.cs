@@ -7,7 +7,7 @@ public class ObjetoInimigo : MonoBehaviour
     
     void Start()
     {
-        transform.position = new Vector2(0f, 1.05f);
+        transform.position = new Vector2(0f, 1.35f);
     }
 
     void Update()

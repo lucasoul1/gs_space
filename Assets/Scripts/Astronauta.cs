@@ -14,6 +14,10 @@ public class Astronauta : MonoBehaviour
     // Propriedades
     private Rigidbody2D rb;
     private bool estaNoChao;
+
+    //Referências
+    public CarregarNovaCena carregarNovaCena;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,18 +39,12 @@ public class Astronauta : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verifica se está no chão
-        if (collision.gameObject.tag == "Chao" || collision.gameObject.tag == "Plataforma" || collision.gameObject.tag == "PlataformaSome")
-        {
-            estaNoChao = true;
-        }
-
         // Colisão com Armadilhas
-        if (collision.gameObject.tag == "Serra")
+        if (collision.gameObject.tag == "ObjetoInimigo")
         {
             vidas--;
             print(vidas);
-            SceneManager.LoadScene("GameScene");
+            SceneManager.GetActiveScene();
         }
 
 
@@ -56,13 +54,29 @@ public class Astronauta : MonoBehaviour
             Destroy(collision.gameObject, 2f);
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // Verifica se está no chão
+        if (collision.gameObject.tag == "Chao" || collision.gameObject.tag == "Plataforma" || collision.gameObject.tag == "PlataformaSome")
+        {
+            estaNoChao = true;
+        }
+    }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         // Verifica se saiu do chão
-        if (collision.gameObject.tag == "Chao" || collision.gameObject.tag == "Plataforma")
+        if (collision.gameObject.tag == "Chao" || collision.gameObject.tag == "Plataforma" || collision.gameObject.tag == "PlataformaSome")
         {
             estaNoChao = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "NovaFase")
+        {
+            carregarNovaCena.CarregarProximaCena();
         }
     }
 }
