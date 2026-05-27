@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 102632842}
   m_Layer: 0
   m_Name: ObjetoInimigo
-  m_TagString: Serra
+  m_TagString: ObjetoInimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

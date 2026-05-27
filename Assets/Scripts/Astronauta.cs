@@ -54,6 +54,7 @@ public class Astronauta : MonoBehaviour
             Destroy(collision.gameObject, 2f);
         }
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         // Verifica se está no chão
