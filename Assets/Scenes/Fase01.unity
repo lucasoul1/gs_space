@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 102632842}
   m_Layer: 0
   m_Name: ObjetoInimigo
-  m_TagString: ObjetoInimigo
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68a29eeab24968c4f847b007d4243ce6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoInimigo
   velocidade: 2
 --- !u!50 &102632842
 Rigidbody2D:
@@ -2117,8 +2117,8 @@ Transform:
   m_GameObject: {fileID: 1172637170}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1493896, y: 7.1, z: 0.015912872}
-  m_LocalScale: {x: 7.6132, y: 1.60412, z: 1}
+  m_LocalPosition: {x: 1.16, y: 7.2801, z: 0.015912872}
+  m_LocalScale: {x: 3.0938823, y: 1.4833697, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223599982}

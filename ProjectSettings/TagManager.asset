@@ -9,7 +9,7 @@ TagManager:
   - PlataformaSome
   - Plataforma
   - NovaFase
-  - ObjetoInimigo
+  - Inimigo
   layers:
   - Default
   - TransparentFX

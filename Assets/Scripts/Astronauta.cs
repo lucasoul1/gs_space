@@ -40,11 +40,11 @@ public class Astronauta : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Colisão com Armadilhas
-        if (collision.gameObject.tag == "ObjetoInimigo")
+        if (collision.gameObject.tag == "Inimigo")
         {
             vidas--;
             print(vidas);
-            SceneManager.GetActiveScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
 
