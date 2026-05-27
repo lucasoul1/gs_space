@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Nave : MonoBehaviour
+public class Astronauta : MonoBehaviour
 {
     // Atributos
     [SerializeField] private float velocidade = 3f;
     public static int vidas = 3;
-    [SerializeField] private float forcaPulo = 5f;
+    [SerializeField] private float forcaPulo = 6f;
     
     // Movimentação
     private float mover_x;

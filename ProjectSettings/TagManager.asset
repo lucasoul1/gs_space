@@ -9,6 +9,7 @@ TagManager:
   - Serra
   - PlataformaSome
   - Plataforma
+  - NovaFase
   layers:
   - Default
   - TransparentFX

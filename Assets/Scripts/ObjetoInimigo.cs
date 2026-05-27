@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class Serra : MonoBehaviour
+public class ObjetoInimigo : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float velocidade = 2f; 
     
     void Start()
     {
-        transform.position = new Vector2(0f,2f);
+        transform.position = new Vector2(0f, 1.05f);
     }
 
     void Update()
