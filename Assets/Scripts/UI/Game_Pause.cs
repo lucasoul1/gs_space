@@ -1,11 +1,12 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game_Pause : MonoBehaviour
 {
     [SerializeField] private GameObject PauseGame;
 
-    private bool JogoPausado = false;
+    private bool JogoPausado;
     
     void Start()
     {
@@ -26,5 +27,11 @@ public class Game_Pause : MonoBehaviour
 
          Time.timeScale = 1f;
          JogoPausado = false;
+    }
+
+    public void ExitLevel()
+    {
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Moeda : MonoBehaviour
 {
     [SerializeField] private float velocidadeRotacao = 130f;
+    [SerializeField] private GerenciadorFase Moedas;
 
     void Update()
     {
@@ -18,8 +19,7 @@ public class Moeda : MonoBehaviour
     {
         if(collision.CompareTag("Astronauta"))
         {
-            GerenciadorFase.quantidadeMoedas++;
-            print(GerenciadorFase.quantidadeMoedas);
+            Moedas.AdicionarMoedas();
             Destroy(gameObject);
         }
     }

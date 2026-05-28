@@ -26,6 +26,11 @@ public class Meteorito : MonoBehaviour
             // Inverte a direção do meteorito
             velocidade *= -1;
         }
+        else if (collision.gameObject.CompareTag("Inimigo"))
+        {
+            velocidade *= -1;
+        }
+
     }
 
     void movimentacaoHorizontal()
