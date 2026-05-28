@@ -6,10 +6,12 @@ TagManager:
   tags:
   - Parede
   - Chao
-  - PlataformaSome
   - Plataforma
-  - NovaFase
   - Inimigo
+  - Astronauta
+  - PlataformaHorizontal
+  - Nave
+  - Moeda
   layers:
   - Default
   - TransparentFX
