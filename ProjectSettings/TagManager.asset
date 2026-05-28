@@ -12,17 +12,18 @@ TagManager:
   - PlataformaHorizontal
   - Nave
   - Moeda
+  - Espaco
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Espaco
   - Water
   - UI
-  - Plataformas
-  - 
-  - 
-  - 
+  - ParedesInvisiveis
+  - Chao
+  - Player
+  - Plataforma
   - 
   - 
   - 

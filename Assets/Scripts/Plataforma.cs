@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Plataforma : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 1f;
+    private float velocidade = 1f;
     
     void Update()
     {
