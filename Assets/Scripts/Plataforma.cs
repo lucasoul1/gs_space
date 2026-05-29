@@ -2,8 +2,20 @@ using UnityEngine;
 
 public class Plataforma : MonoBehaviour
 {
-    private float velocidade = 1f;
-    
+    private float velocidade;
+
+    float posicaoInicialX;
+    float posicaoInicialY;
+
+    void Start()
+    {
+        // Propriedas Iniciais
+        velocidade = Random.Range(-1f, 1f);
+
+        posicaoInicialX = transform.position.x;
+        posicaoInicialY = transform.position.y;
+    }
+
     void Update()
     {
         // Movimentar Plataformas
@@ -11,20 +23,20 @@ public class Plataforma : MonoBehaviour
         {
             movimentacaoHorizontal();
         }
-        else if (CompareTag("PlataformaHorizontal") && gameObject.name == "PlataformaSome")
+        else if (CompareTag("PlataformaVertical"))
         {
-            movimentacaoHorizontal();
+            movimentacaoVertical();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Sumir Plataformas
-        if(gameObject.name == "PlataformaSome")
+        if (gameObject.CompareTag("PlataformaSome"))
         {
             if (collision.gameObject.CompareTag("Astronauta"))
             {
-                Destroy(gameObject, 1.5f);
+                Destroy(gameObject, 2f);
             }
         }
     }
@@ -50,9 +62,12 @@ public class Plataforma : MonoBehaviour
     // Funcao de Movimentação das Plataformas
     void movimentacaoHorizontal()
     {
+        float limitePositivo = posicaoInicialX + 1f;
+        float limiteNegativo = posicaoInicialX - 1f;
+
         transform.Translate(velocidade * Time.deltaTime, 0f, 0f);
 
-        if (transform.position.x >= 1f || transform.position.x <= -1f)
+        if (transform.position.x >= limitePositivo || transform.position.x <= limiteNegativo)
         {
             velocidade *= -1;
         }
@@ -60,6 +75,14 @@ public class Plataforma : MonoBehaviour
 
     void movimentacaoVertical()
     {
+        float limitePositivo = posicaoInicialY + 1f;
+        float limiteNegativo = posicaoInicialY - 1f;
+
         transform.Translate(0f, velocidade * Time.deltaTime, 0f);
+
+        if (transform.position.y >= limitePositivo || transform.position.y <= limiteNegativo)
+        {
+            velocidade *= -1;
+        }
     }
 }

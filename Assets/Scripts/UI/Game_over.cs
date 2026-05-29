@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Game_over : MonoBehaviour
 {
     public GameObject TelaGameOver;
-    [SerializeField] bool GameOver = false;
+    public bool GameOver = false;
 
     void Start()
     {
@@ -25,6 +25,6 @@ public class Game_over : MonoBehaviour
 
     public void recomecar()
     {
-        SceneManager.LoadScene("Fase01");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

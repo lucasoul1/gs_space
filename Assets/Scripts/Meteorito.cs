@@ -21,6 +21,7 @@ public class Meteorito : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Colisoes com o espaço ou entre os Meteoritos
         if (collision.gameObject.CompareTag("Espaco"))
         {
             // Inverte a direção do meteorito

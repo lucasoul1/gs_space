@@ -5,9 +5,8 @@ public class Astronauta : MonoBehaviour
 {
     // Atributos
     [SerializeField] private float velocidade = 3f;
-    public static int vidas = 3;
     [SerializeField] private float forcaPulo = 6f;
-    
+
     // Movimentação
     private float mover_x;
 
@@ -27,12 +26,10 @@ public class Astronauta : MonoBehaviour
         mover_x = Input.GetAxis("Horizontal") * velocidade * Time.deltaTime;
         transform.Translate(mover_x, 0f, 0f);
 
-        // Pulo 
+        // Pulo
         if (estaNoChao && Input.GetButtonDown("Jump"))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
         }
     }
-
-    
 }
