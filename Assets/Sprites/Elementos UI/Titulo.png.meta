@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 6680050650163475411
     second: Titulo_0
+  - first:
+      213: -8703404932657416651
+    second: Titulo_1
+  - first:
+      213: -1443021122773484504
+    second: Titulo_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,10 +109,10 @@ TextureImporter:
       name: Titulo_0
       rect:
         serializedVersion: 2
-        x: 248
-        y: 227
-        width: 1528
-        height: 748
+        x: 463
+        y: 624
+        width: 990
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +123,50 @@ TextureImporter:
       bones: []
       spriteID: 3d37c948cae44bc50800000000000000
       internalID: 6680050650163475411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 549
+        width: 1257
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536729c835b473780800000000000000
+      internalID: -8703404932657416651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titulo_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 241
+        width: 1182
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c73bd2feb59fbe0800000000000000
+      internalID: -1443021122773484504
       vertices: []
       indices: 
       edges: []
@@ -136,6 +186,8 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Titulo_0: 6680050650163475411
+      Titulo_1: -8703404932657416651
+      Titulo_2: -1443021122773484504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
