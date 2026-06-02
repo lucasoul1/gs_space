@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 37ce68cae2c020c4b9821bebfb2c576b
+guid: 885e7b45e80034e2e92074bc8b5c431d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5607819680231318820
-    second: voltar_0
+      213: 3425553051273282844
+    second: "Opc\u0327o\u0303es 3_0"
   - first:
-      213: -2212626251904037327
-    second: voltar_1
-  - first:
-      213: -6313251261569440824
-    second: voltar_2
-  - first:
-      213: -1553458787837702910
-    second: voltar_3
-  - first:
-      213: 6409634571822246297
-    second: voltar_4
-  - first:
-      213: -2091590902338105232
-    second: voltar_5
+      213: -6393759115555224949
+    second: "Opc\u0327o\u0303es 3_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -115,133 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: voltar_0
+      name: "Opc\u0327o\u0303es 3_0"
       rect:
         serializedVersion: 2
-        x: 290
-        y: 728
-        width: 663
-        height: 150
+        x: 296
+        y: 694
+        width: 651
+        height: 184
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 425e1a4a94af2dd40800000000000000
-      internalID: 5607819680231318820
+      spriteID: c15466cc9520a8f20800000000000000
+      internalID: 3425553051273282844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voltar_1
+      name: "Opc\u0327o\u0303es 3_1"
       rect:
         serializedVersion: 2
-        x: 521
-        y: 728
-        width: 312
-        height: 150
+        x: 282
+        y: 320
+        width: 651
+        height: 184
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13e4e8a952c2b41e0800000000000000
-      internalID: -2212626251904037327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: voltar_2
-      rect:
-        serializedVersion: 2
-        x: 835
-        y: 728
-        width: 118
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c3ed583d63d268a0800000000000000
-      internalID: -6313251261569440824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: voltar_3
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 514
-        width: 663
-        height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20d89b98671017ae0800000000000000
-      internalID: -1553458787837702910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: voltar_4
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 514
-        width: 312
-        height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9992781fea893f850800000000000000
-      internalID: 6409634571822246297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: voltar_5
-      rect:
-        serializedVersion: 2
-        x: 835
-        y: 514
-        width: 118
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 070d2b2f72d29f2e0800000000000000
-      internalID: -2091590902338105232
+      spriteID: b824ae1c5fdc447a0800000000000000
+      internalID: -6393759115555224949
       vertices: []
       indices: 
       edges: []
@@ -250,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b060fe0510ac442fc9792b7e20fa7af7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      voltar_0: 5607819680231318820
-      voltar_1: -2212626251904037327
-      voltar_2: -6313251261569440824
-      voltar_3: -1553458787837702910
-      voltar_4: 6409634571822246297
-      voltar_5: -2091590902338105232
+      "Opc\u0327o\u0303es 3_0": 3425553051273282844
+      "Opc\u0327o\u0303es 3_1": -6393759115555224949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
