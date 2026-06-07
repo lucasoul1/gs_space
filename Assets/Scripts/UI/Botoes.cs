@@ -12,7 +12,7 @@ public class Botoes : MonoBehaviour
 
     public void iniciar()
     {
-        SceneManager.LoadScene("Fase01");
+        SceneManager.LoadScene("LuaIda");
 
     }
     public void abrirOpcoes()

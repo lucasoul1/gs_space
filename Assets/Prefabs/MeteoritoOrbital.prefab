@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3803834393605651247}
   - component: {fileID: 8907262108612450453}
   - component: {fileID: 752041437809284501}
-  - component: {fileID: 1757089676315946153}
-  m_Layer: 3
-  m_Name: Meteorito
+  - component: {fileID: 570405598026322063}
+  m_Layer: 10
+  m_Name: MeteoritoOrbital
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.46, y: -0.18, z: 0}
-  m_LocalScale: {x: 0.43010792, y: 0.43010792, z: 0.43010792}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.7874846}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7640619854836255113, guid: 2445ec7e6a657974dafb488ac4b13089, type: 3}
+  m_Sprite: {fileID: 3247492866977552177, guid: 8565ce1c2aa5a4d21bb25bd8a9db08f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,8 +129,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.06499951, y: -0.18525888}
-  m_Radius: 1.7783681
+  m_Offset: {x: -0.015125871, y: -0.02500832}
+  m_Radius: 0.9198834
 --- !u!50 &8907262108612450453
 Rigidbody2D:
   serializedVersion: 5
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inimigo
   gameOver: {fileID: 0}
---- !u!114 &1757089676315946153
+--- !u!114 &570405598026322063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,9 +180,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7704894261543829948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd259546738aa74a8593915246a6279, type: 3}
+  m_Script: {fileID: 11500000, guid: c61eb19600be04b19af08ef079d1c1f3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Meteorito
-  velocidade: 2
-  velocidadeRotacao: 0
-  destruirAoTocarParede: 0
+  m_EditorClassIdentifier: Assembly-CSharp::MeteoritoOrbital
+  velocidade: -2.5
+  velocidadeRotacao: 90

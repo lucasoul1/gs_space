@@ -7,7 +7,7 @@ public class Astronauta : MonoBehaviour
     [SerializeField] private float velocidade = 3f;
     [SerializeField] private float forcaPulo = 6f;
 
-    // Movimentação
+    // Movimentaï¿½ï¿½o
     private float mover_x;
 
     // Propriedades
@@ -17,12 +17,12 @@ public class Astronauta : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        transform.position = new Vector2(0f, -3.835f);
+
     }
 
     void Update()
     {
-        // Movimentação
+        // Movimentaï¿½ï¿½o
         mover_x = Input.GetAxis("Horizontal") * velocidade * Time.deltaTime;
         transform.Translate(mover_x, 0f, 0f);
 

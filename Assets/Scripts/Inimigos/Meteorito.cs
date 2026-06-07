@@ -1,45 +1,55 @@
-using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Meteorito : MonoBehaviour
 {
-    [SerializeField] private float velocidade;
-    private float velocidadeRotacao;
+    [SerializeField] private float velocidade = 2f;
+    [SerializeField] private float velocidadeRotacao;
+    [SerializeField] private bool destruirAoTocarParede = false;
+
 
     private void Start()
     {
-        velocidade = Random.Range(-2, 3f);
-        velocidadeRotacao = Random.Range(1f, 41f);
+        velocidadeRotacao = Random.Range(20f, 80f);
     }
 
     void Update()
     {
-        movimentacaoHorizontal();
-        rotacaoMeteorito();
+        MovimentacaoHorizontal();
+        RotacaoMeteorito();
+    }
+    public void ConfigurarDestruicaoNaParede(bool deveDestruir)
+{
+    destruirAoTocarParede = deveDestruir;
+}
+
+    public void ConfigurarVelocidade(float novaVelocidade)
+    {
+        velocidade = novaVelocidade;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Colisoes com o espaço ou entre os Meteoritos
         if (collision.gameObject.CompareTag("Espaco"))
-        {
-            // Inverte a direção do meteorito
-            velocidade *= -1;
-        }
-        else if (collision.gameObject.CompareTag("Inimigo"))
-        {
-            velocidade *= -1;
-        }
+            {
+            if(destruirAoTocarParede)
+            {
+                Destroy(gameObject);
+
+            }
+            else
+            {
+                velocidade *= -1;
+            }
+            }
 
     }
 
-    void movimentacaoHorizontal()
+    void MovimentacaoHorizontal()
     {
-        transform.Translate(velocidade * Time.deltaTime, 0f, 0f);
+        transform.Translate(Vector3.right * velocidade * Time.deltaTime, Space.World);
     }
 
-    void rotacaoMeteorito()
+    void RotacaoMeteorito()
     {
         transform.Rotate(0f, 0f, velocidadeRotacao * Time.deltaTime);
     }

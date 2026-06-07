@@ -7,6 +7,8 @@ public class Nave : MonoBehaviour
     float posicaoInicialX;
     float posicaoInicialY;
 
+    public GerenciadorFase gerenciador;
+
     void Start()
     {
         // Propriedas Iniciais
@@ -22,22 +24,18 @@ public class Nave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Quando o jogador chegar ao final da fase, ela vai para a próxima
-        if (collision.CompareTag("Astronauta"))
+        // Quando o jogador chegar ao final da fase, ela vai para a prï¿½xima
+        if (collision.CompareTag("Astronauta") && gerenciador.FaseDeIda == false)
         {
-            // Adicionar Moedas pegas ao Inventário
+            // Adicionar Moedas pegas ao Inventï¿½rio
             Inventario.moedasInventario += GerenciadorFase.quantidadeMoedas;
 
-            carregarProximaFase();
+            gerenciador.carregarProximaFase();
         }
     }
 
-    // Função para carregar a Próxima Fase
-    public void carregarProximaFase()
-    {
-        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(cenaAtual + 1);
-    }
+    // Funï¿½ï¿½o para carregar a Prï¿½xima Fase
+
 
     void movimentacaoVertical()
     {
