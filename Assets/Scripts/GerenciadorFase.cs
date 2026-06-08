@@ -4,7 +4,7 @@ using TMPro;
 
 public class GerenciadorFase : MonoBehaviour
 {
-    public bool FaseDeIda = true;
+    public bool FaseDeIda = false;
     public string fase;
     public static int quantidadeMoedas = 0;
     public TextMeshProUGUI MoedasColetadas;
@@ -13,10 +13,16 @@ public class GerenciadorFase : MonoBehaviour
 
     void Start()
     {
+
         AtualizarMoedas();
         if(SceneManager.GetActiveScene().name == "LuaIda")
         {
             FaseDeIda = true;
+            print(FaseDeIda);
+        }
+        else
+        {
+            FaseDeIda = false;
             print(FaseDeIda);
         }
     }

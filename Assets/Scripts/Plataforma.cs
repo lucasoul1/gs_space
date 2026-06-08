@@ -9,7 +9,7 @@ public class Plataforma : MonoBehaviour
 
     void Start()
     {
-        // Propriedas Iniciais
+        // Propriedades Iniciais
         velocidade = Random.Range(-1f, 1f);
 
         posicaoInicialX = transform.position.x;
@@ -39,11 +39,24 @@ public class Plataforma : MonoBehaviour
                 Destroy(gameObject, 2f);
             }
         }
+
+        // Fazer o jogador acompanhar a plataforma
+        if (collision.gameObject.CompareTag("Astronauta"))
+        {
+            foreach (ContactPoint2D contato in collision.contacts)
+            {
+                if (contato.normal.y < -0.5f)
+                {
+                    collision.transform.SetParent(transform);
+                    break;
+                }
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // Verificando Colis�o de entrada com o Astronauta
+        // Verificando Colisão de entrada com o Astronauta
         if (collision.gameObject.CompareTag("Astronauta"))
         {
             Astronauta.estaNoChao = true;
@@ -52,14 +65,15 @@ public class Plataforma : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // Verificando Colis�o de sa�da com o Astronauta
+        // Verificando Colisão de saída com o Astronauta
         if (collision.gameObject.CompareTag("Astronauta"))
         {
             Astronauta.estaNoChao = false;
+            collision.transform.SetParent(null);
         }
     }
 
-    // Funcao de Movimenta��o das Plataformas
+    // Função de Movimentação Horizontal
     void movimentacaoHorizontal()
     {
         float limitePositivo = posicaoInicialX + 1f;
@@ -73,6 +87,7 @@ public class Plataforma : MonoBehaviour
         }
     }
 
+    // Função de Movimentação Vertical
     void movimentacaoVertical()
     {
         float limitePositivo = posicaoInicialY + 1f;

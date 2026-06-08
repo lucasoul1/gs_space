@@ -1432,6 +1432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1829433377}
     m_Modifications:
+    - target: {fileID: 752041437809284501, guid: 2b872b10b590c174899923d1fe5d14aa, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1614049344}
     - target: {fileID: 7704894261543829948, guid: 2b872b10b590c174899923d1fe5d14aa, type: 3}
       propertyPath: m_Name
       value: Meteorito
@@ -1667,7 +1671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205266304495282372, guid: b8bf80d2e8a0f4323927dfd423adb22e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.72
+      value: 6.96
       objectReference: {fileID: 0}
     - target: {fileID: 8205266304495282372, guid: b8bf80d2e8a0f4323927dfd423adb22e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3502,6 +3506,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8205266304495282372, guid: b8bf80d2e8a0f4323927dfd423adb22e, type: 3}
   m_PrefabInstance: {fileID: 1711363738}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1529914753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529914755}
+  - component: {fileID: 1529914754}
+  m_Layer: 0
+  m_Name: Inventario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1529914754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529914753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0daabde864903242aa6ded1d8901b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventario
+--- !u!4 &1529914755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529914753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.422874, y: 1.574894, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1588704785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3524,7 +3572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4309735109471736886, guid: 81f62071756d8ed45be78fc7a5be4b3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4309735109471736886, guid: 81f62071756d8ed45be78fc7a5be4b3a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3579,6 +3627,10 @@ PrefabInstance:
       propertyPath: velocidadeRotacao
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 752041437809284501, guid: 20f94fa6b10604af3a09084101361ac8, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1614049344}
     - target: {fileID: 7704894261543829948, guid: 20f94fa6b10604af3a09084101361ac8, type: 3}
       propertyPath: m_Name
       value: MeteoritoOrbital
@@ -4023,7 +4075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Queda
   cameraTransform: {fileID: 519420032}
-  offsetY: -7
+  offsetY: -6.5
 --- !u!61 &1763575223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4141,7 +4193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a29eeab24968c4f847b007d4243ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inimigo
-  gameOver: {fileID: 1614049344}
 --- !u!1 &1778157904
 GameObject:
   m_ObjectHideFlags: 0
@@ -4671,8 +4722,8 @@ MonoBehaviour:
   meteoritoPrefab: {fileID: 7704894261543829948, guid: 2b872b10b590c174899923d1fe5d14aa, type: 3}
   intervaloSpawn: 0.75
   tempoAtivo: 3
-  tempoSemSpawn: 1.2
-  velocidadeMeteorito: 3
+  tempoSemSpawn: 1.5
+  velocidadeMeteorito: 4
   moverParaDireita: 1
 --- !u!61 &1891064813
 BoxCollider2D:
@@ -5128,6 +5179,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 252671020292512839, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: forcaPulo
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 252671020292512839, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: velocidade
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753308597982439623, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753308597982439623, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753308597982439623, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113235306701164332, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8546925
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113235306701164332, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_Size.y
+      value: 6.2269382
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113235306701164332, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113235306701164332, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.10190165
+      objectReference: {fileID: 0}
     - target: {fileID: 5460311286977090634, guid: 6ef26daf664c3254a92c9e9752c499dc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15235783
@@ -5274,3 +5361,4 @@ SceneRoots:
   - {fileID: 7412791639181196380}
   - {fileID: 1588704785}
   - {fileID: 1602911620}
+  - {fileID: 1529914755}
