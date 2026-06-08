@@ -3,7 +3,14 @@ using UnityEngine;
 public class Moeda : MonoBehaviour
 {
     [SerializeField] private float velocidadeRotacao = 130f;
-    [SerializeField] private GerenciadorFase Moedas;
+    private AudioSource audioSource;
+    private GerenciadorFase Moedas;
+
+    void Start()
+    {
+        Moedas = FindFirstObjectByType<GerenciadorFase>();
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -17,10 +24,14 @@ public class Moeda : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Astronauta"))
+        if (collision.CompareTag("Astronauta"))
         {
+            // Adiona as Moedas na HUD
             Moedas.AdicionarMoedas();
-            Destroy(gameObject);
+            // Toca o som
+            audioSource.Play();
+            // Tira a Moeda da tela
+            Destroy(gameObject, 0.45f);
         }
     }
 }

@@ -1,7 +1,9 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class Botoes : MonoBehaviour
@@ -13,7 +15,6 @@ public class Botoes : MonoBehaviour
     public void iniciar()
     {
         SceneManager.LoadScene("LuaIda");
-
     }
     public void abrirOpcoes()
      {

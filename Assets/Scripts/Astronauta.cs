@@ -13,16 +13,17 @@ public class Astronauta : MonoBehaviour
     // Propriedades
     private Rigidbody2D rb;
     public static bool estaNoChao;
+    private SpriteRenderer sr;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        // Movimenta��o
+        // Movimentação
         mover_x = Input.GetAxis("Horizontal") * velocidade * Time.deltaTime;
         transform.Translate(mover_x, 0f, 0f);
 
@@ -30,6 +31,16 @@ public class Astronauta : MonoBehaviour
         if (estaNoChao && Input.GetButtonDown("Jump"))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
+        }
+
+        // Virar Sprite
+        if (mover_x > 0)
+        {
+            sr.flipX = false;
+        }
+        else if (mover_x < 0)
+        {
+            sr.flipX = true;
         }
     }
 }
