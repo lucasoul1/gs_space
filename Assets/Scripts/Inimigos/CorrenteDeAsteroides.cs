@@ -1,41 +1,44 @@
 using System.Collections;
 using UnityEngine;
 
-
 public class CorrenteDeAsteroides : MonoBehaviour
 {
-    //Prefab
+    // Prefab
     [SerializeField] private GameObject meteoritoPrefab;
 
+    // Spawn
     [SerializeField] private float intervaloSpawn = 0.25f;
     [SerializeField] private float tempoAtivo = 3f;
-    [SerializeField] private float tempoSemSpawn = 1.2f;
 
-    //Movimento dos meteoritos
+    // Tempo aleatório sem spawn
+    [SerializeField] private float tempoSemSpawnMin = 1f;
+    [SerializeField] private float tempoSemSpawnMax = 3f;
+
+    // Movimento dos meteoritos
     [SerializeField] private float velocidadeMeteorito = 4f;
 
-    //Direção
+    // Direção
     [SerializeField] private bool moverParaDireita = true;
 
     private BoxCollider2D areaSpawn;
 
-        private void Awake()
+    private void Awake()
     {
         areaSpawn = GetComponent<BoxCollider2D>();
     }
 
-private void Start()
+    private void Start()
     {
         StartCoroutine(Corrente());
     }
 
-private IEnumerator Corrente()
+    private IEnumerator Corrente()
     {
         while (true)
         {
             float tempoAtual = 0f;
 
-            // Período em que a parede está criando meteoritos
+            // Período em que a corrente gera meteoritos
             while (tempoAtual < tempoAtivo)
             {
                 SpawnarMeteorito();
@@ -45,12 +48,14 @@ private IEnumerator Corrente()
                 tempoAtual += intervaloSpawn;
             }
 
-            // Período sem criar meteoritos, gerando a passagem
-            yield return new WaitForSeconds(tempoSemSpawn);
+            // Sorteia um tempo aleatório sem spawn
+            float tempoSemSpawnAleatorio =
+                Random.Range(tempoSemSpawnMin, tempoSemSpawnMax);
+
+            yield return new WaitForSeconds(tempoSemSpawnAleatorio);
         }
-        
-        
     }
+
     private void SpawnarMeteorito()
     {
         float x = transform.position.x;
@@ -60,7 +65,11 @@ private IEnumerator Corrente()
 
         float yAleatorio = Random.Range(yMin, yMax);
 
-        Vector3 posicaoSpawn = new Vector3(x, yAleatorio, transform.position.z);
+        Vector3 posicaoSpawn = new Vector3(
+            x,
+            yAleatorio,
+            transform.position.z
+        );
 
         GameObject novoMeteorito = Instantiate(
             meteoritoPrefab,
@@ -72,13 +81,13 @@ private IEnumerator Corrente()
 
         if (meteorito != null)
         {
-              float direcao = moverParaDireita ? 1f : -1f;
+            float direcao = moverParaDireita ? 1f : -1f;
 
-            meteorito.ConfigurarVelocidade(velocidadeMeteorito * direcao);
+            meteorito.ConfigurarVelocidade(
+                velocidadeMeteorito * direcao
+            );
 
-            meteorito.ConfigurarDestruicaoNaParede(true);  
-            
+            meteorito.ConfigurarDestruicaoNaParede(true);
         }
-
     }
 }

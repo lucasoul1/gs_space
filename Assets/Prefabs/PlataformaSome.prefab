@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.65, y: 0.26, z: 0.0038308357}
-  m_LocalScale: {x: 0.22134596, y: 0.1484375, z: 1}
+  m_LocalScale: {x: 0.5218195, y: 0.5218195, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6397275996589404910, guid: eb2504d7425782b43b97044b26e8bd58, type: 3}
-  m_Color: {r: 0.051397298, g: 0.990566, b: 0.8227368, a: 0.5882353}
+  m_Sprite: {fileID: 6859821311630196925, guid: 8af8fc1bedfff45ccb314f06e4fd99bc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,8 +131,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.9553452, y: 1.0336014}
-  - {x: 2.9176352, y: 1.0336013}
+  - {x: -1.1510904, y: 0.43828902}
+  - {x: 1.1774908, y: 0.4199716}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -168,3 +168,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828abb4784cf8614c926deaac3bf3108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Plataforma
+  posicaoFinal: 1

@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Plataforma : MonoBehaviour
 {
-    private float velocidade;
+    [SerializeField] private float posicaoFinal = 1f;
 
-    float posicaoInicialX;
-    float posicaoInicialY;
+    private float velocidade;
+    private float posicaoInicialX;
+    private float posicaoInicialY;
 
     void Start()
     {
         // Propriedades Iniciais
-        velocidade = Random.Range(-1f, 1f);
+        velocidade = 1f;
 
         posicaoInicialX = transform.position.x;
         posicaoInicialY = transform.position.y;
@@ -32,7 +33,7 @@ public class Plataforma : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Sumir Plataformas
-        if (gameObject.CompareTag("PlataformaSome"))
+        if (CompareTag("PlataformaSome"))
         {
             if (collision.gameObject.CompareTag("Astronauta"))
             {
@@ -40,8 +41,10 @@ public class Plataforma : MonoBehaviour
             }
         }
 
-        // Fazer o jogador acompanhar a plataforma
-        if (collision.gameObject.CompareTag("Astronauta"))
+        // Fazer o jogador acompanhar APENAS plataformas móveis
+        if (collision.gameObject.CompareTag("Astronauta") &&
+            (CompareTag("PlataformaHorizontal") ||
+             CompareTag("PlataformaVertical")))
         {
             foreach (ContactPoint2D contato in collision.contacts)
             {
@@ -69,19 +72,25 @@ public class Plataforma : MonoBehaviour
         if (collision.gameObject.CompareTag("Astronauta"))
         {
             Astronauta.estaNoChao = false;
-            collision.transform.SetParent(null);
+
+            // Remove o parent apenas se estiver usando plataforma móvel
+            if (collision.transform.parent == transform)
+            {
+                collision.transform.SetParent(null);
+            }
         }
     }
 
     // Função de Movimentação Horizontal
     void movimentacaoHorizontal()
     {
-        float limitePositivo = posicaoInicialX + 1f;
-        float limiteNegativo = posicaoInicialX - 1f;
+        float limitePositivo = posicaoInicialX + posicaoFinal;
+        float limiteNegativo = posicaoInicialX - posicaoFinal;
 
         transform.Translate(velocidade * Time.deltaTime, 0f, 0f);
 
-        if (transform.position.x >= limitePositivo || transform.position.x <= limiteNegativo)
+        if (transform.position.x >= limitePositivo ||
+            transform.position.x <= limiteNegativo)
         {
             velocidade *= -1;
         }
@@ -90,12 +99,13 @@ public class Plataforma : MonoBehaviour
     // Função de Movimentação Vertical
     void movimentacaoVertical()
     {
-        float limitePositivo = posicaoInicialY + 1f;
-        float limiteNegativo = posicaoInicialY - 1f;
+        float limitePositivo = posicaoInicialY + posicaoFinal;
+        float limiteNegativo = posicaoInicialY - posicaoFinal;
 
         transform.Translate(0f, velocidade * Time.deltaTime, 0f);
 
-        if (transform.position.y >= limitePositivo || transform.position.y <= limiteNegativo)
+        if (transform.position.y >= limitePositivo ||
+            transform.position.y <= limiteNegativo)
         {
             velocidade *= -1;
         }

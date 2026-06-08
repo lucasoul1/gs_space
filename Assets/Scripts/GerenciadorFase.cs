@@ -15,7 +15,7 @@ public class GerenciadorFase : MonoBehaviour
     {
 
         AtualizarMoedas();
-        if(SceneManager.GetActiveScene().name == "LuaIda")
+        if(SceneManager.GetActiveScene().name == "LuaIda" ||SceneManager.GetActiveScene().name == "EuropaIda" )
         {
             FaseDeIda = true;
             print(FaseDeIda);

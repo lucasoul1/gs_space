@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version: 0.12.3'
+  m_text: 'Version: 0.14 (boa sorte em Europa'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6004a7f9abc334e42a89a54611ab8563, type: 2}
   m_sharedMaterial: {fileID: 1141379264340173685, guid: 6004a7f9abc334e42a89a54611ab8563, type: 2}
@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -3.0067215, z: 0, w: 0}
+  m_margin: {x: -470.5736, y: -3.0067215, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
