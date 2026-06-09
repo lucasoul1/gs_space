@@ -7,17 +7,17 @@ public class Chao : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Astronauta"))
+        if (collision.gameObject.CompareTag("Astronauta"))
         {
             Astronauta.estaNoChao = true;
 
-            if(gerenciador.FaseDeIda == true)
+            if (gerenciador.FaseDeIda == true)
             {
-            
-            gerenciador.carregarProximaFase();
+
+                gerenciador.carregarProximaFase();
 
             }
-            
+
         }
     }
 

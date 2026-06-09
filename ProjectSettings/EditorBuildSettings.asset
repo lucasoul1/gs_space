@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EuropaIda.unity
     guid: 17ffdcd1898634aa59b4062f680ac2be
+  - enabled: 1
+    path: Assets/Scenes/EuropaVolta.unity
+    guid: f9b1f3cff76ef45d8ad0bed9e2053ae4
+  - enabled: 1
+    path: Assets/Scenes/IoIda.unity
+    guid: 68ac5dc54799770449fc61d174a3454e
+  - enabled: 1
+    path: Assets/Scenes/IoVolta.unity
+    guid: 1e31a977252ce4e41a19d537b6880e3c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
