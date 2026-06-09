@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7957453178982644731}
   - component: {fileID: 1614133954713840633}
   - component: {fileID: 325947123357565862}
+  - component: {fileID: -6843023289509066495}
   m_Layer: 7
   m_Name: IO
   m_TagString: Chao
@@ -152,3 +153,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chao
   gerenciador: {fileID: 0}
+--- !u!95 &-6843023289509066495
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7381599522861799838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c62389d8b632efb4ea0efcb890ae492a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
